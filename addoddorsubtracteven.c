@@ -2,45 +2,16 @@
 
 int main()
 {
-
-    int t,a,b,count=0,odd=1,even=2;
+    int t,a,b;
     scanf("%d",&t);
-
     for(int i=1;i<=t;i++){
-        count=0;
-        scanf("%d %d",&a,&b);
-if(a>0){
-        if(a==b){
-            printf("0\n");
-        }else if((a<b)&&(b-a)==2){
-            printf("2\n");
-        }
-        else if(a<b){
-            for(int j=1;a!=b;j++){
-                while(a<b){
-            a=a+odd;
-                }
-            count++;
-            if(a==b){
-                printf("%d\n",count);
-            }
-            }
-        }else if(a>b){
-            for(int j=1;a!=b;j++){
-                while(a>b){
-            a=a-even;
-                }
-            count++;
-             if(a==b){
-                printf("%d\n",count);
-            }else if(a<b){
-                a=a+odd;
-                count++;
-                printf("%d\n",count);
-            }
-            }
+       scanf("%d %d",&a,&b);
+        if(a==b) printf("0\n");
+        else if(a>b && (a-b)%2==0 || b>a && (b-a)%2!=0){
+                 printf("1\n");
+        }else {
+                 printf("2\n");
         }
     }
-}
     return 0;
-}
+}   
