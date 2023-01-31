@@ -18,7 +18,7 @@ int main()
 			i++;
 		}
 		
-		else if(s[i]=='.') cout<<"0";
+		//else if(s[i]=='.') cout<<"0";
 	}
 	
 }
