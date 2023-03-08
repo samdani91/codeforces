@@ -9,14 +9,13 @@ int main()
 	{
 		cin>>n;
 		if(n%7==0) cout<<n<<endl;
-		else{
-			if(n<7) cout<<7<<endl;
-			else{
-				int ans=(n%7);
-				int ans2=min(ans,7-ans);
-
-				cout<<n-ans2<<endl;
-			}
+		else{	
+				int rem=n%10;
+				int ans=7-(n%7);
+				if(rem+ans<10) cout<<n+ans<<endl;
+				else cout<<n-(n%7)<<endl;
+				
+			
 		}
 	}
 
