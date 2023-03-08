@@ -29,10 +29,11 @@ int main()
     cin>>t;
     while(t--)
     {
-        cin>>s1>>s2;
+        cin>>s1;
+        cin>>s2;
         set<char>st;
-        for(auto ch:s1) st.insert(ch);
-        for(auto ch:s2) st.insert(ch);
+        for(char ch:s1) st.insert(ch);
+        for(char ch:s2) st.insert(ch);
 
         cout<<st.size()-1<<endl;
     }
