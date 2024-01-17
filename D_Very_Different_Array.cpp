@@ -50,10 +50,17 @@ int main()
                         continue;
                     }
                     ans+=abs(a[s]-b[l]);
+                    s++;
                     l++;
                 }else{
-                    
+                    if(abs(a[f]-b[l])>=abs(a[f]-b[r])){
+                        ans+=abs(a[f]-b[l]);
+                        f--;
+                        l++;
+                        continue;
+                    }
                     ans+=abs(a[s]-b[r]);
+                    s++;
                     r--;
                 }
             }
